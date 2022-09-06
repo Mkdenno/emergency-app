@@ -27,6 +27,14 @@ const NewReportForm = ({ params,onAddReport }) => {
     })
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const dataInput ={
+        title: inputData.title,
+        description: inputData.description,
+        location: inputData.location,
+        user_id:params.id
+    }
 
   return (
     <div>
