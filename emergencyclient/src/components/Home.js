@@ -19,7 +19,9 @@ const Home = ({report,onAddReport}) => {
      <div className="userdetails">
         <h1>Welcome {params.username}!!</h1>
       </div>
-
+      <div className="reportscontainer">
+      <Reports report={report} params={params} onAddReport={onAddReport}/>
+      </div>
      </div>
     </div>
   );
