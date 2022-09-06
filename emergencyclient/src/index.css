@@ -268,6 +268,8 @@ font-size: 2rem;
   
   tr:nth-child(even) {
     background-color: #dddddd;
+    word-wrap: break-word;
+
   }
   .tbtn span{
     padding: 3px;
@@ -285,6 +287,7 @@ font-size: 2rem;
   .fomreport{
 width: 30%;
 /* border: 1px solid red; */
+
     }
     .formR{
       width: 100%;

@@ -77,15 +77,15 @@ class ApplicationController < Sinatra::Base
        postreport.to_json
    end
 
-  #  update reports
-  # update '/updatereports/:id' do
-  #   updatereport=Report.find(params[:id])
-  #   updatereport.update_attributes(
-  #     title: params[:title],
-  #     description: params[:description],
-  #     location: params[:location],
-  #   )
-  #     updatereport.to_json
+   update reports
+  update '/updatereports/:id' do
+    updatereport=Report.find(params[:id])
+    updatereport.update_attributes(
+      title: params[:title],
+      description: params[:description],
+      location: params[:location],
+    )
+      updatereport.to_json
 
   # end
   # delete '/deletereport/:id' do
