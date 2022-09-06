@@ -46,7 +46,12 @@ const NewReportForm = ({ params,onAddReport }) => {
     .then((res) => res.json())
     .then((data) => onAddReport(data));
 
-
+    setInputData({
+      title: "",
+      description: "",
+      location: "",
+    })
+    // window.location.reload();
   };
   return (
     <div>
