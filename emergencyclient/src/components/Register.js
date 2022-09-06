@@ -73,10 +73,11 @@ const Register = () => {
 
   return (
     <div className="register-container">
+
+      <form className="login" onSubmit={handleSubmit}>
       <div className="loginHeader">
         <h2>Register</h2>
       </div>
-      <form className="login" onSubmit={handleSubmit}>
       <h2 className="error"> {userData.message}</h2>
         <input
           type="text"

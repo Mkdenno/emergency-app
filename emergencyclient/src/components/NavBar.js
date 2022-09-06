@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+
+
   return (
-<header className="navcontainer">
+    <header className="navcontainer">
   <div className="my-app">
   <h2><span className="title">Emergency</span> Application</h2>
   </div>
@@ -23,10 +25,10 @@ const NavBar = () => {
   </NavLink> */}
 
   <NavLink
-  to="/reports"
+  to="/about"
   exact="true"
   >
-    <li>Reports</li>
+    <li>About</li>
   </NavLink>
 
   <NavLink
@@ -38,6 +40,7 @@ const NavBar = () => {
   </div>
 
 </header>
+
   );
 };
 

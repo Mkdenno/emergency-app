@@ -8,7 +8,8 @@ class ApplicationController < Sinatra::Base
    end
 
    get '/reports' do
-    user= Report.all
+    user = Report.order("id DESC")
+    #user= Report.all
     user.to_json
    end
   #  registration routes
@@ -64,14 +65,32 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-
+# post reports
 
    post '/postreports' do
     postreport=Report.create(
       title: params[:title],
       description: params[:description],
+      location: params[:location],
       user_id: params[:user_id]
        )
        postreport.to_json
    end
+
+  #  update reports
+  # update '/updatereports/:id' do
+  #   updatereport=Report.find(params[:id])
+  #   updatereport.update_attributes(
+  #     title: params[:title],
+  #     description: params[:description],
+  #     location: params[:location],
+  #   )
+  #     updatereport.to_json
+
+  # end
+  # delete '/deletereport/:id' do
+  #   deletereport=Report.find(params[:id])
+  #   deletereport.destroy
+  #   deletereport.to_json
+  # end
 end

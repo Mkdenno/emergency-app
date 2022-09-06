@@ -8,15 +8,15 @@ User.create(username:"Kijana", email: "denniskiprop2@gmail.com", password: "1234
 
 
 # creating Reports
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:1)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:2)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:3)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:4)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:5)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:5)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:4)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:3)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:2)
-Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally", user_id:1)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:1)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It Kawangware", user_id:2)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It Fedha", user_id:3)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It Prestige", user_id:4)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:5)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:5)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:4)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:3)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:2)
+Report.create(title:"Fire at My Neighbourhood", description:"It happened accidendally",location:"It JuJa", user_id:1)
 
 puts "✅ Done seeding!"
