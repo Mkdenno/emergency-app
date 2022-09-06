@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
 const NewReportForm = ({ params,onAddReport }) => {
+  const [inputData, setInputData] = useState({
+    title: "",
+    description: "",
+    location: "",
+    user_id: ""
+
+  });
+  // console.log(params.id)
 
   return (
     <div>
