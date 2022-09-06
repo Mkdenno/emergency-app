@@ -9,6 +9,24 @@ const NewReportForm = ({ params,onAddReport }) => {
 
   });
   // console.log(params.id)
+  const URL="http://localhost:9292/postreports"
+  const handleInputChange = (event) => {
+    setInputData({
+        ...inputData,[event.target.name]: event.target.value
+    })
+  };
+  const handleInputDescription = (event) => {
+    setInputData({
+        ...inputData,[event.target.name]: event.target.value
+    })
+  };
+
+  const handleInputLocation = (event) => {
+    setInputData({
+        ...inputData,[event.target.name]: event.target.value
+    })
+  };
+
 
   return (
     <div>
