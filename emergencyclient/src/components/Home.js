@@ -7,3 +7,22 @@ import Reports from "./Reports";
 const Home = ({report,onAddReport}) => {
 
   // let [visible, setButtonVisibility] = useState("");
+
+  let params = useParams();
+
+
+  return (
+    <div >
+
+    <NavBar  />
+     <div className="home-container">
+     <div className="userdetails">
+        <h1>Welcome {params.username}!!</h1>
+      </div>
+
+     </div>
+    </div>
+  );
+};
+
+export default Home;
