@@ -77,7 +77,7 @@ class ApplicationController < Sinatra::Base
        postreport.to_json
    end
 
-   update reports
+  #  update reports
   update '/updatereports/:id' do
     updatereport=Report.find(params[:id])
     updatereport.update_attributes(
@@ -87,10 +87,10 @@ class ApplicationController < Sinatra::Base
     )
       updatereport.to_json
 
-  # end
-  # delete '/deletereport/:id' do
-  #   deletereport=Report.find(params[:id])
-  #   deletereport.destroy
-  #   deletereport.to_json
-  # end
+  end
+  delete '/deletereport/:id' do
+    deletereport=Report.find(params[:id])
+    deletereport.destroy
+    deletereport.to_json
+  end
 end
