@@ -36,6 +36,18 @@ const NewReportForm = ({ params,onAddReport }) => {
         user_id:params.id
     }
 
+    fetch(URL,{
+        method: "POST",
+        headers: {
+            "content-Type": "application/json",
+        },
+        body: JSON.stringify(dataInput)
+    })
+    .then((res) => res.json())
+    .then((data) => onAddReport(data));
+
+
+  };
   return (
     <div>
       <form onSubmit={handleSubmit} className="formR">
