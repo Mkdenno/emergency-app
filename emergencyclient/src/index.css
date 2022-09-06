@@ -249,4 +249,233 @@ font-size: 2rem;
     border: 1px solid red;
     margin: 10px;
   } */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    word-wrap: break-word;
 
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1em;
+    word-wrap: break-word;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .tbtn span{
+    padding: 3px;
+  }
+  .tbtn .btn1{
+    padding: 4px;
+    color: red;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  /* .reportscontainer{
+    width: 20%;
+  } */
+    /* fomreport */
+  .fomreport{
+width: 30%;
+/* border: 1px solid red; */
+    }
+    .formR{
+      width: 100%;
+    }
+   .hideshow{
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+    .formR input{
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+    }
+    .formR .report-btn{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding:8px 15px;
+      cursor: pointer;
+
+
+    }
+    .formR .report-btn:hover{
+      background-color: teal;
+    }
+
+    /* border-bottom: 1px solid #1f1e1e; */
+  .tbtn .btn2{
+    padding: 4px;
+    color: green;
+    cursor: pointer;
+  }
+
+
+
+
+
+/* footer */
+.footer{
+  /* background-color: teal; */
+  height: 30vh;
+
+}
+
+@media only screen and (max-width: 390px) {
+  .register-container >form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 10px 10px 40px grey;
+    
+    }
+    .reportscontainer{
+      width: 10%;
+    }
+    .register-container >form >input {
+      padding: 15px;
+      width: 100%;
+      margin:10px 200px;
+      /* border: none; */
+      border-radius: 5px;
+    }
+    /* reports */
+
+    .report-container{
+      display: flex;
+      justify-content: space-around;
+      height: 20vh;
+      width: 100%;
+    }
+    /* .reportlist{
+      border: 1px solid red;
+      margin: 10px;
+    } */
+    table {
+      border-collapse: collapse;
+      width: 30%;
+      margin-bottom: 0.5rem;
+      padding: 1rem;
+      word-wrap: break-word;
+  
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 1em;
+      word-wrap: break-word;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    .tbtn span{
+      padding: 3px;
+    }
+    .tbtn .btn1{
+      padding: 4px;
+      color: red;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    
+
+    @media only screen and (max-width: 414px) {
+      .register-container >form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid grey;
+        box-shadow: 10px 10px 40px grey;
+        
+        }
+        .register-container >form >input {
+          padding: 15px;
+          width: 100%;
+          margin:10px 200px;
+          /* border: none; */
+          border-radius: 5px;
+        }}
+
+    @media only screen and (min-width: 912px) {
+      .register-container >form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid grey;
+        box-shadow: 10px 10px 40px grey;
+        
+        }
+        .register-container >form >input {
+          padding: 35px;
+          width: 100%;
+          margin:10px 200px;
+          /* border: none; */
+          border-radius: 5px;
+        }
+}
+}
+
+
+/* login */
+@media only screen and (max-width: 414px) {
+  .login-container >form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 10px 10px 40px grey;
+    
+    }
+    .login-container >form >input {
+      padding: 15px;
+      width: 100%;
+      margin:10px 200px;
+      /* border: none; */
+      border-radius: 5px;
+    }}
+
+@media only screen and (max-width: 912px) {
+  .login-container >form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 10px 10px 40px grey;
+    
+    }
+    .login-container >form >input {
+      padding: 15px;
+      width: 100%;
+      margin:10px 200px;
+      /* border: none; */
+      border-radius: 5px;
+    }
+}
