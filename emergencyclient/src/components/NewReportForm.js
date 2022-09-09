@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewReportForm = ({ params,onAddReport }) => {
+const NewReportForm = ({ params,onAddReport, hidePopUp,handleupdateClick,id, repo }) => {
   const [inputData, setInputData] = useState({
     title: "",
     description: "",
@@ -8,6 +8,31 @@ const NewReportForm = ({ params,onAddReport }) => {
     user_id: ""
 
   });
+
+  // 0703380880
+
+  // function handleupdateClick(){
+  //   fetch(`http://localhost:9292/updatereports/${id}`,{
+  //     method: "PATCH",
+  //     headers: {
+  //       "Accept": "application/json"
+  //     },
+  //     body: JSON.stringify(
+  //       {
+  //         title: inputData.title,
+  //         description: inputData.description,
+  //         location: inputData.location,
+
+  //       }
+  //     )
+
+
+  //   })
+  //   .then(res => res.json())
+  //   .then(res => console.log(res))
+
+  // }
+
   // console.log(params.id)
   const URL="http://localhost:9292/postreports"
   const handleInputChange = (event) => {
@@ -19,6 +44,7 @@ const NewReportForm = ({ params,onAddReport }) => {
     setInputData({
         ...inputData,[event.target.name]: event.target.value
     })
+
   };
 
   const handleInputLocation = (event) => {
@@ -51,7 +77,7 @@ const NewReportForm = ({ params,onAddReport }) => {
       description: "",
       location: "",
     })
-    // window.location.reload();
+    window.location.reload();
   };
   return (
     <div>
@@ -64,7 +90,7 @@ const NewReportForm = ({ params,onAddReport }) => {
           value={inputData.title}
         />
         <br />
-        <input
+        <textarea
           type="text"
           name="description"
           placeholder="Enter Description of emergency report"
@@ -80,9 +106,17 @@ const NewReportForm = ({ params,onAddReport }) => {
           value={inputData.location}
         />
         <br />
+
+        <div className="action_btn">
         <button type="submit" className="report-btn">
           Submit
         </button>
+
+        <a className="close-btn" onClick={hidePopUp}>
+          Close
+        </a>
+        </div>
+        
       </form>
     </div>
   );

@@ -4,8 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import About from "./components/About";
-const url="http://localhost:9292/reports"
-function App() {
+import NewReportForm from "./components/NewReportForm";
+const url = "http://localhost:9292/reports";
+function App({params}) {
   // const [isDarkMode,setIsDarkMode]=useState(false)
   const [report, setReport] = useState([]);
   // this will be used for the Dark Mode Toggle feature
@@ -17,26 +18,40 @@ function App() {
 
   // fetching
 
-
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setReport(data));
   }, []);
-  const onAddReport=(addNewReport) =>{
+
+  const onAddReport = (addNewReport) => {
     setReport([addNewReport, ...report]);
-  }
+  };
+  const handleDeleteReport = (id) => {
+    const updateReport = report.filter((report) => report.id !== id);
+    setReport(updateReport);
+  };
+
 
   return (
     <div>
-      {/* <button onClick={handleButton}>{isDarkMode ? "App dark" : "App light"} Mode</button> */}
       <Routes>
-        <Route path="/:id/:username/:role" element={<Home report={report} onAddReport={onAddReport}/>} />
-        <Route path="/about" element={<About/>} />
+        <Route
+          path="/:id/:username/:role"
+          element={
+            <Home
+            params={params}
+              report={report}
+              onAddReport={onAddReport}
+              onReportDelete={handleDeleteReport}
+            />
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/addreport" element={<NewReportForm  params={params} onAddReport={onAddReport} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Login />} />
       </Routes>
-      {/* <Footer/> */}
     </div>
   );
 }

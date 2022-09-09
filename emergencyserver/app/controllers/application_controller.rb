@@ -78,19 +78,28 @@ class ApplicationController < Sinatra::Base
    end
 
   #  update reports
-  update '/updatereports/:id' do
+  patch '/updatereports/:id' do
     updatereport=Report.find(params[:id])
-    updatereport.update_attributes(
+    updatereport.update(
       title: params[:title],
       description: params[:description],
-      location: params[:location],
+      location: params[:location]
     )
       updatereport.to_json
 
   end
-  delete '/deletereport/:id' do
+
+  delete '/deletereports/:id' do
     deletereport=Report.find(params[:id])
+
     deletereport.destroy
     deletereport.to_json
   end
+
+  # filter reports by title
+  get '/filterreports/:title' do
+    reports=Report.find_by_title(params[:title])
+    reports.to_json
+  end
+
 end

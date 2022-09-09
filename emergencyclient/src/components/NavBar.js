@@ -17,13 +17,6 @@ const NavBar = () => {
     <li>Home</li>
   </NavLink>
 
-  {/* <NavLink
-  to="/register"
-  exact="true"
-  >
-        <li>Register</li>
-  </NavLink> */}
-
   <NavLink
   to="/about"
   exact="true"
