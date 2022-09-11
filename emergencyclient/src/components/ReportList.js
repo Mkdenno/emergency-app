@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 const Url ="https://emergencybackend.herokuapp.com"
 
 
 const ReportList = ({ id, repo, onReportDelete,params }) => {
+  const [isChecked,setIsChecked] = useState(false)
 // console.log(repo)
 
   const handleEditClick = () => {
+    setIsChecked((isChecked)=>!isChecked)
     
     
   };
@@ -42,8 +44,7 @@ const ReportList = ({ id, repo, onReportDelete,params }) => {
             </span>
           </button>
           : 
-          <button onClick={handleEditClick}>Check
-        </button>
+          <button onClick={handleEditClick}>{isChecked? "Checked" : "check"}</button>
           }
 
         </td>

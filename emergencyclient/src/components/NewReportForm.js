@@ -77,7 +77,7 @@ const NewReportForm = ({ params,onAddReport, hidePopUp,handleupdateClick,id, rep
       description: "",
       location: "",
     })
-    // window.location.reload();
+    window.location.reload();
   };
   return (
     <div>
