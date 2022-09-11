@@ -1,5 +1,9 @@
-import React, { useState } from "react";
-const ReportList = ({ id, repo, onReportDelete }) => {
+import React from "react";
+const Url ="https://emergencybackend.herokuapp.com"
+
+
+const ReportList = ({ id, repo, onReportDelete,params }) => {
+// console.log(repo)
 
   const handleEditClick = () => {
     
@@ -7,7 +11,7 @@ const ReportList = ({ id, repo, onReportDelete }) => {
   };
 
   const handleDeleteClick = () => {
-    fetch(`http://localhost:9292/deletereports/${id}`, {
+    fetch(`${Url}/deletereports/${id}`, {
       method: "DELETE",
       headers: {
         "content-Type": "application/json",
@@ -20,21 +24,28 @@ const ReportList = ({ id, repo, onReportDelete }) => {
   return (
     <>
       <tr>
-        <td>{repo.created_at.slice(0, 19)}</td>
+        <td>{repo.created_at}</td>
         <td>{repo.title}</td>
         <td>{repo.description}</td>
         <td>{repo.location}</td>
         <td className="tbtn">
           <button onClick={handleDeleteClick}>
             <span className="btn1">
-              <i class="fa fa-trash"></i>
+              <i className="fa fa-trash"></i>
             </span>
           </button>
-          <button onClick={handleEditClick}>
+          {
+           params.role === 'user'?
+            <button onClick={handleEditClick}>
             <span className="btn2">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
             </span>
           </button>
+          : 
+          <button onClick={handleEditClick}>Check
+        </button>
+          }
+
         </td>
       </tr>
     </>

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+const Url ="https://emergencybackend.herokuapp.com"
+
 
 const Register = () => {
-  // const [userName, setUserName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [userData, setUserData] = useState("");
+
   const [userData, setUserData] = useState("");
   const [submittedData, setSubmittedData] = useState({
     username: "",
@@ -51,7 +50,7 @@ const Register = () => {
     };
 
     // console.log(submittedData);
-    fetch("http://localhost:9292/userregistration", {
+    fetch(`${Url}/userregistration`, {
       method: "POST",
       headers: {
         "content-Type": "application/json",

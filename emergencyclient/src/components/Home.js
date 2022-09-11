@@ -21,7 +21,9 @@ const Home = ({ report, onAddReport ,onReportDelete}) => {
     <ReportList 
     id={repo.id} 
     repo={repo} 
-    onReportDelete={onReportDelete}/>
+    onReportDelete={onReportDelete}
+    params={params}
+    />
   ));
 
   const togglePopUp = () => {
@@ -68,6 +70,7 @@ const Home = ({ report, onAddReport ,onReportDelete}) => {
 
         <div className="displayreports">
           <table>
+            <thead>
             <tr>
               <th>Time&Date</th>
               <th>Title</th>
@@ -75,7 +78,10 @@ const Home = ({ report, onAddReport ,onReportDelete}) => {
               <th>Location</th>
               <th>Action</th>
             </tr>
+            </thead>
+            <tbody>
             {reportdisplay}
+            </tbody>
           </table>
           </div>
           </div>

@@ -34,7 +34,7 @@ const NewReportForm = ({ params,onAddReport, hidePopUp,handleupdateClick,id, rep
   // }
 
   // console.log(params.id)
-  const URL="http://localhost:9292/postreports"
+  const URL="https://emergencybackend.herokuapp.com"
   const handleInputChange = (event) => {
     setInputData({
         ...inputData,[event.target.name]: event.target.value
@@ -62,7 +62,7 @@ const NewReportForm = ({ params,onAddReport, hidePopUp,handleupdateClick,id, rep
         user_id:params.id
     }
 
-    fetch(URL,{
+    fetch(`${URL}/postreports`,{
         method: "POST",
         headers: {
             "content-Type": "application/json",
@@ -77,7 +77,7 @@ const NewReportForm = ({ params,onAddReport, hidePopUp,handleupdateClick,id, rep
       description: "",
       location: "",
     })
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <div>

@@ -5,7 +5,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import About from "./components/About";
 import NewReportForm from "./components/NewReportForm";
-const url = "http://localhost:9292/reports";
+const url ="https://emergencybackend.herokuapp.com"
 function App({params}) {
   // const [isDarkMode,setIsDarkMode]=useState(false)
   const [report, setReport] = useState([]);
@@ -19,7 +19,7 @@ function App({params}) {
   // fetching
 
   useEffect(() => {
-    fetch(url)
+    fetch(`${url}/reports`)
       .then((res) => res.json())
       .then((data) => setReport(data));
   }, []);
