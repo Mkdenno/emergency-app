@@ -3,6 +3,9 @@
 This is a web based application that users can report an emergency through the website.Then the staffs from various organizations will access the reports and act on the with immediate effect.
 
 ## ScreenShot
+![Screenshot from 2022-09-12 17-15-41](https://user-images.githubusercontent.com/104482846/189677250-ca96b726-a85c-42e4-83a0-34f99975cc17.png)
+![Screenshot from 2022-09-12 17-15-59](https://user-images.githubusercontent.com/104482846/189677322-3f1219c2-98b1-42ad-9e82-f5c15d1a0cb0.png)
+
 
 
 ## Technologies Used
